@@ -2,6 +2,7 @@ import { Search, Menu, User, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useNavigate } from "react-router-dom";
 
 interface CloudHeaderProps {
   onMenuClick: () => void;
@@ -10,6 +11,8 @@ interface CloudHeaderProps {
 }
 
 export const CloudHeader = ({ onMenuClick, searchQuery, onSearchChange }: CloudHeaderProps) => {
+  const navigate = useNavigate();
+
   return (
     <header className="bg-card border-b border-border px-4 py-3 sticky top-0 z-40 backdrop-blur-sm bg-card/95">
       <div className="flex items-center gap-3">
@@ -45,7 +48,12 @@ export const CloudHeader = ({ onMenuClick, searchQuery, onSearchChange }: CloudH
         
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button variant="ghost" size="icon" className="shrink-0">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="shrink-0"
+            onClick={() => navigate("/profile")}
+          >
             <User className="h-5 w-5" />
           </Button>
         </div>
