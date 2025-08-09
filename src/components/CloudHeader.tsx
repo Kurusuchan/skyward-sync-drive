@@ -1,6 +1,7 @@
 import { Search, Menu, User, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface CloudHeaderProps {
   onMenuClick: () => void;
@@ -42,9 +43,12 @@ export const CloudHeader = ({ onMenuClick, searchQuery, onSearchChange }: CloudH
           </div>
         </div>
         
-        <Button variant="ghost" size="icon" className="shrink-0">
-          <User className="h-5 w-5" />
-        </Button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button variant="ghost" size="icon" className="shrink-0">
+            <User className="h-5 w-5" />
+          </Button>
+        </div>
       </div>
     </header>
   );
