@@ -33,7 +33,7 @@ export const FileGrid = ({ files, searchQuery, onUpload }: FileGridProps) => {
         <div className="flex items-center gap-2">
           <Button
             onClick={onUpload}
-            className="bg-gradient-primary hover:opacity-90 shadow-cloud"
+            className="bg-primary hover:bg-primary/90 shadow-cloud"
           >
             <Plus className="h-4 w-4 mr-2" />
             Upload
@@ -67,7 +67,7 @@ export const FileGrid = ({ files, searchQuery, onUpload }: FileGridProps) => {
             {searchQuery ? "Try adjusting your search" : "Upload your first file to get started"}
           </p>
           {!searchQuery && (
-            <Button onClick={onUpload} className="bg-gradient-primary shadow-cloud">
+            <Button onClick={onUpload} className="bg-primary hover:bg-primary/90 shadow-cloud">
               <Plus className="h-4 w-4 mr-2" />
               Upload Files
             </Button>

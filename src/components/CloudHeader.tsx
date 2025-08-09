@@ -23,10 +23,10 @@ export const CloudHeader = ({ onMenuClick, searchQuery, onSearchChange }: CloudH
         </Button>
         
         <div className="flex items-center gap-2 font-bold text-xl">
-          <div className="p-2 bg-gradient-primary rounded-lg shadow-cloud animate-glow">
+          <div className="p-2 bg-primary rounded-lg shadow-cloud animate-glow">
             <Cloud className="h-6 w-6 text-primary-foreground" />
           </div>
-          <span className="bg-gradient-primary bg-clip-text text-transparent">
+          <span className="text-primary">
             SCloud Drive
           </span>
         </div>
